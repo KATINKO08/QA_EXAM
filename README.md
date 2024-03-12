@@ -1,75 +1,17 @@
-### System Specifications
-
-| Requirements | Versions |
-| :----------: | :------: |
-|   LARAVEL    |   10.x    |
-|     PHP      | ^8.1.10  |
-|    MYSQL     |   ^10.4.25   |
-
-## Configuration
-
-1.  Clone this repository.
-
-    ```bash
-        $   git clone https://github.com/ericnicdao069/backend-dev-exam.git
-    ```
-
-2.  Recreate environment variable file.
-
-    ```bash
-        $   cp .env.example .env
-    ```
-
-3.  Install composer and npm.
-
-    ```bash
-        $   composer install && npm install
-    ```
-
-4.  Generate Application Key.
-
-    ```bash
-        $   php artisan key:generate
-    ```
-
-5.  Create your DB and update your DB configs in .env.
-
-    ```bash
-        $   DB_CONNECTION=mysql
-        $   DB_HOST=127.0.0.1
-        $   DB_PORT=3306
-        $   DB_DATABASE=laravel
-        $   DB_USERNAME=root
-        $   DB_PASSWORD=
-    ```
-
-6.  Execute Database Migration and Seeders.
-
-    ```bash
-        $   php artisan migrate --seed
-    ```
-
-7.  Create a symlink for Storage in Public Directory.
-
-    ```bash
-        $   php artisan storage:link
-    ```
-
-8.  Generate Ziggy routes.
-
-    ```bash
-        $   php artisan ziggy:generate
-    ```
-
-9.  Run local server.
-
-    ```bash
-        $   php artisan serve
-    ```
-
-10.  Front Build.
-
-    ```bash
-        $   npm run dev
-        $   npm run build
-    ```
+1) install ububntu OS in my VMware
+2) setup my ubuntu OS
+3) install vscode, git, node.js, xampp
+4) clone from repository 'https://github.com/praxxys/qa-engineer-exam'
+5) install composer and npm
+6) install all the php extension that is required to run the project
+7) run 'cp .env.example .env' and 'php artisan key:generate'
+8) run php artisan 'migrate:fresh --seed' to migrate database in MySQL
+9) install laravel dusk
+10) create login test file by running 'php artisan dusk:make LoginTest'
+11) conduct testing using 'php artisan dusk'
+12) check failed test using 'php artisan dusk:fails'
+13) install playwright
+14) run test 'npx playwright test'
+15) run this 'npx playwright show-report' to show report in browser
+16) run test with ui 'npx playwright test --ui'
+17) push the code in GitHub
