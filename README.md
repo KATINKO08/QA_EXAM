@@ -14,4 +14,5 @@
 14) run test 'npx playwright test'
 15) run this 'npx playwright show-report' to show report in browser
 16) run test with ui 'npx playwright test --ui'
-17) push the code in GitHub
+17) added laravel.yml for CI/CD with GitHub Actions
+18) push the code in GitHub
