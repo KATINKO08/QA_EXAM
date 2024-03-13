@@ -14,8 +14,8 @@ test('test', async ({ page }) => {
   await page.getByRole('combobox').selectOption('1');
   await page.getByLabel('Rich Text Editor').getByRole('paragraph').fill('qwertyuiopasdfghkjhkl');
   await page.getByText('Next').click();
-  await page.getByRole('link', { name: '+' }).click();
-  await page.getByRole('link', { name: '+' }).setInputFiles('s-l1200.jpg');
+  await page.getByRole('link', { name: '+', exact: true }).click();
+  await page.getByRole('link', { name: '+', exact: true }).setInputFiles('s-l1200.jpg');
   await page.getByText('Next').click();
   await page.getByLabel('Datepicker input').click();
   await page.getByText('14').click();
