@@ -28,7 +28,6 @@ test('test', async ({ page }) => {
   await page.getByRole('button', { name: 'Select' }).click();
   await page.getByText('Submit').click();
   await page.getByRole('button', { name: 'OK' }).click();
-  await page.getByRole('button', { name: 'Yes' }).click();
   await page.getByRole('link', { name: ' Videos' }).click();
   await page.getByRole('button', { name: 'Play Video' }).click();
   await page.getByRole('link', { name: 'test2.webm' }).click();
