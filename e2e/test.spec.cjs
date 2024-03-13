@@ -14,15 +14,20 @@ test('test', async ({ page }) => {
   await page.getByRole('combobox').selectOption('1');
   await page.getByLabel('Rich Text Editor').getByRole('paragraph').fill('qwertyuiopasdfghkjhkl');
   await page.getByText('Next').click();
-  await page.getByRole('link', { name: '+', exact: true }).click();
-  await page.getByRole('link', { name: '+', exact: true }).setInputFiles('s-l1200.jpg');
+  await page.getByRole('link', { name: '+'}).click();
+
+  const fileChooserPromise = page.waitForEvent('filechooser');
+  await page.getByRole('link', { name: '+'}).click();
+  const fileChooser = await fileChooserPromise;
+  await fileChooser.setFiles('/home/katinko/Desktop/Visual_Studio_Projects/backend-dev-exam/public/assets/picture/s-l1200.jpg');
+
+//   await page.getByRole('link', { name: '+', exact: true }).setInputFiles('s-l1200.jpg');
   await page.getByText('Next').click();
   await page.getByLabel('Datepicker input').click();
   await page.getByText('14').click();
   await page.getByRole('button', { name: 'Select' }).click();
   await page.getByText('Submit').click();
   await page.getByRole('button', { name: 'OK' }).click();
-  await page.getByRole('row', { name: 'qwert Electonics <p>the phone' }).locator('a').nth(1).click();
   await page.getByRole('button', { name: 'Yes' }).click();
   await page.getByRole('link', { name: ' Videos' }).click();
   await page.getByRole('button', { name: 'Play Video' }).click();
